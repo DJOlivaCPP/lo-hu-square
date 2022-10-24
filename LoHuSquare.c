@@ -91,6 +91,10 @@ int main()
     }
 
     printf("%d attempts to create a LoHu Square randomly\n", counter);
+
+    printf("[ %d, %d, %d ]\n", randomSquare[0][0], randomSquare[0][1], randomSquare[0][2]);
+    printf("[ %d, %d, %d ]\n", randomSquare[1][0], randomSquare[1][1], randomSquare[1][2]);
+    printf("[ %d, %d, %d ]\n", randomSquare[2][0], randomSquare[2][1], randomSquare[2][2]);
     
     return 0;
 }
