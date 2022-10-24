@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
+//Lo Hu Square
 square1[] =
 {
     {4, 9, 2},
@@ -77,9 +78,7 @@ int main()
 
         counter++;
 
-        if(isLoHu(randomSquare) == 1){
-            LoHu = 1;        
-        }
+        LoHu = isLoHu(randomSquare);
     }
 
     printf("%d attempts to create a LoHu Square randomly\n", counter);
