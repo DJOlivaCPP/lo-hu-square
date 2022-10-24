@@ -1,14 +1,7 @@
-// 2 files:
-// one file to store the table values
-// one file containing the logic for the square
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-// create two arrays to test functions if the functions are correct
-// we add vertically and howrizontally for each row
-
-// create a new random table to test the functions
-// loop until a Lo Hu Square is created
-
-// correct Lo Hu Squaer
 square1[] =
 {
     {4, 9, 2},
@@ -24,7 +17,7 @@ square2[] =
     {8, 1, 7}
 };
 
-randomSquare[3][3];
+int randomSquare[3][3];
 
 int isLoHu(int LoHu[3][3])
 {
@@ -39,11 +32,7 @@ int isLoHu(int LoHu[3][3])
     int diagOneSum = LoHu[0][0] + LoHu[1][1] + LoHu[2][2];
     int diagTwoSum = LoHu[2][0] + LoHu[1][1] + LoHu[0][2];
 
-    if (diagOneSum != diagTwoSum)
-    {
-        return 0;
-    }
-    else if (rowOneSum == rowTwoSum && rowTwoSum == rowThreeSum && rowThreeSum == colOneSum && colOneSum == colTwoSum && colTwoSum == colThreeSum && colThreeSum == diagOneSum && diagOneSum == diagTwoSum)
+    if (rowOneSum == rowTwoSum && rowTwoSum == rowThreeSum && rowThreeSum == colOneSum && colOneSum == colTwoSum && colTwoSum == colThreeSum && colThreeSum == diagOneSum && diagOneSum == diagTwoSum)
     {
         return 1;
     }
@@ -57,7 +46,7 @@ int main()
 {
     if (isLoHu(square1) == 1)
     {
-        printf("Square 1 is a Lo Hu Square\n");
+        printf("Square 1 is a Lo Hu Square\n"); //expexted
     }
     else
     {
@@ -70,13 +59,16 @@ int main()
     }
     else
     {
-        printf("Square 2 is not a Lo Hu Square\n");
+        printf("Square 2 is not a Lo Hu Square\n"); //expected
     }
 
     int counter = 0;
     int LoHu = 0;
     while (LoHu == 0)
     {
+        time_t t;
+        srand((unsigned)time(&t));
+
         for(int i = 0; i < 3; i++){
             for(int j = 0; j < 3; j++){
                 randomSquare[i][j] = (rand()%8) + 1;
