@@ -3,19 +3,19 @@
 #include <time.h>
 
 //Lo Hu Square
-square1[] =
+int square1[3][3] =
 {
-    {4, 9, 2},
-    {3, 5, 7},
-    {8, 1, 6}
+    4, 9, 2,
+    3, 5, 7,
+    8, 1, 6
 };
 
 // non Lo Hu Square
-square2[] =
+int square2[3][3] =
 {
-    {2, 5, 4},
-    {3, 9, 6},
-    {8, 1, 7}
+    2, 5, 4,
+    3, 9, 6,
+    8, 1, 7
 };
 
 int randomSquare[3][3];
